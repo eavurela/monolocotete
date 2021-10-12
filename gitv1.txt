@@ -1,0 +1,79 @@
+------------- GIT TUTO -------------
+
+Control de versiones - Distribuido. 
+
+git version // saber si está instalado 
+
+Configurar git -- nombre e email -- 
+git config --global user.name "nomnbre"
+git config --global user.email "nombre@blabla"
+git config --list   // muestra las configuraciones
+
+Para hacer que un repo sea por hit
+
+git init  (crea un repo en el directorio dónde estoy)
+Crea un directorio oculto .git ahi estará todo el historial del repo.
+En caso querramos dejar cosas ocultas del repo de git 
+
+gitignore  y listamos lo que queremos que ignore. 
+
+Etapas de GIT 
+
+Directorio de trabajo  //  stage // repo 
+
+modificable   // prueba // terminado 
+
+git status  (vemos el estado de nustros archivos) 
+
+git add -A (agrega todo los archivos que no estén trackeados) Los mandó a staging
+
+git rm --cached (archivo)
+
+"Commitear agregar archivos al repo" 
+
+git commit -m "Mensaje para saber qué hizo y porqué"
+
+git log // podemos ver el historial de lo que hay en el repo.
+
+Vamos a usar un repo que ya existe, para eso nos traemos el código. 
+
+Https 
+
+git clone "URL del repo" me descarga todo en un directorio. 
+
+git diff // nos muestra las diferencias entre el repo y el work directory
+
+git push origin master (para subir el codigo a github)
+git pull origin master (para bajarse el código)
+
+Crear una branch (una rama del código, y luego se une a master)
+
+git branch  "nombre de la branch"
+git checkout "nombre del a branch" 
+
+git status (nos dice dónde estamos "on bla bla")
+
+git branch // nos dice cuales branch hay en la máquina. 
+
+git push -u origin "nombre de la branch" 
+
+git branch -a (muestra las de la máquina y las remotas)
+
+git checkout master ()
+git pull origin master
+git branch --merged 
+git merge "nombre de la branch"
+git push origin master 
+git push origin --delete "nombre de la branch"
+git branch -d "nombre de la branch" 
+
+Nos pasamos a master     (git checkout master)
+nos traemos la última versión    (git pull origin master)
+crear branch                     (git branch nombre branch)
+nos pasamos a la branch y trabajamos       git checkout nombre branch
+agregamos a stage                          git add -A
+comiteamos al repo                         git commit -m "nombre del cmm"
+subimos la branch                          git push origin "nombre branch"
+me paso a master y agrego la branch        git checkout master  
+luego subimos la master con la merge       git marge nombre marge
+subirmos a lo loco                         git push origin master
