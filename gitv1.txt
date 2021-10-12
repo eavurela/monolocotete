@@ -77,3 +77,21 @@ subimos la branch                          git push origin "nombre branch"
 me paso a master y agrego la branch        git checkout master  
 luego subimos la master con la merge       git marge nombre marge
 subirmos a lo loco                         git push origin master
+
+git checkout "nombre archivo" // lo resetea tal cual está en el repo.
+git commit --amend (nos permite modificar el último commit y cambiar el mensaje, sobre escribe el commit no agrega)
+git log --stat // nos muestra los archivos modificados en un commit 
+
+Mover un commit de una branch a otra.
+
+Copiamos el hash, 
+
+git checkout nos pasamos a la branch 
+
+git cherry-pick "hash del commit" // lo que hace es copiar, no mover. 
+git checkout vamos a la branch  
+
+git reset  --soft   "hash del commit"  // los vuelve al stage area 
+           modo mix "hash del commit"// los cambios los vuelve a working directory
+           --hard   "hash del commit"// borra el commit y deja el working directory limpio
+
